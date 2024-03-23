@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.ViewFilmActivity"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:weightSum="100"
+            android:orientation="horizontal"
+    >
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:id="@+id/imgFilmView"/>
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+            <TextView
+                    android:text="Título"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/txtTituloView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:gravity="center_vertical"/>
+            <TextView
+                    android:text="Estreno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/txtEstreno"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:gravity="center_vertical"
+            />
+            <TextView
+                    android:text="Duración"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/txtDuracion"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+            android:text="Sinopsis"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:id="@+id/txtSinopsis"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:id="@+id/webView">
+    </WebView>
+
+</LinearLayout>

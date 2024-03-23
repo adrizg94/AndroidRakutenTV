@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:scaleType="centerCrop"
+                android:id="@+id/imgFilm"/>
+
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="75"
+                android:weightSum="100"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:id="@+id/txtTitulo"
+                    android:text="Título"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+                    android:id="@+id/txtPuntuacion"
+                    android:text="Visitas"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginLeft="20dp" android:gravity="center_vertical"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+                    android:id="@+id/txtVisitas"
+                    android:text="Puntuación"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginLeft="20dp" android:gravity="center_vertical"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+                    android:id="@+id/txtPrecio"
+                    android:text="Descripción"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginLeft="20dp" android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mas"
+                android:scaleType="fitCenter"
+                android:id="@+id/btnView"
+        />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
