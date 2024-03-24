@@ -1,5 +1,9 @@
 package com.seas.androidrakutentv.beans;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class User {
     private int id;
     private String nombre;
@@ -10,13 +14,13 @@ public class User {
 
     public User() {}
 
-    public User(int id, String nombre, String apellido, String email, String password, String registro) {
+    public User(int id, String nombre, String apellido, String email, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.password = password;
-        this.registro = registro;
+        this.registro = new SimpleDateFormat("yyy-MM-dd").format(Calendar.getInstance().getTime());
     }
 
     public int getId() {

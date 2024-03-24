@@ -1,6 +1,8 @@
 package com.seas.androidrakutentv.views;
 
 import android.content.Intent;
+import android.text.method.LinkMovementMethod;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,6 +13,7 @@ import com.seas.androidrakutentv.R;
 import com.seas.androidrakutentv.beans.User;
 import com.seas.androidrakutentv.login_user.LoginUserContract;
 import com.seas.androidrakutentv.login_user.LoginUserPresenter;
+import com.seas.androidrakutentv.utils.Statics;
 
 //Vista del Login
 public class LoginUserActivity extends AppCompatActivity implements LoginUserContract.View {
@@ -18,6 +21,7 @@ public class LoginUserActivity extends AppCompatActivity implements LoginUserCon
     private EditText edtUser;
     private EditText edtPass;
     private Button btnLogin;
+    private TextView txtNewUser;
     private LoginUserPresenter presenter;
     private User user;
 
@@ -39,12 +43,19 @@ public class LoginUserActivity extends AppCompatActivity implements LoginUserCon
             presenter.getUser(user);
         });
 
+        txtNewUser.setOnClickListener(v -> {
+            Intent viewNewUser = new Intent(getBaseContext(), NewUserActivity.class);
+            startActivity(viewNewUser);
+        });
+
     }
 
     public void initComponents() {
         edtUser = findViewById(R.id.edtUser);
         edtPass = findViewById(R.id.edtPass);
         btnLogin = findViewById(R.id.btnLogin);
+        txtNewUser = findViewById(R.id.textNewUser);
+        txtNewUser.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     public void initUser() {
@@ -55,6 +66,7 @@ public class LoginUserActivity extends AppCompatActivity implements LoginUserCon
 
     @Override
     public void successLoginUser(User user) {
+        Statics.userName = user.getNombre();
         Intent vistaPeliculas = new Intent(getBaseContext(), ListFilmsActivity.class);
         startActivity(vistaPeliculas);
     }

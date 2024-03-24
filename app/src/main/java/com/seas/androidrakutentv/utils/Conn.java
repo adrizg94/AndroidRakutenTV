@@ -37,7 +37,7 @@ public class Conn {
     public JSONArray getJSON() {
         JSONArray listJSON = null;
         try {
-            isr = new InputStreamReader(is, StandardCharsets.ISO_8859_1);
+            isr = new InputStreamReader(is, StandardCharsets.UTF_8);
             reader = new BufferedReader(isr);
             StringBuilder buffer = new StringBuilder();
             String readLine;

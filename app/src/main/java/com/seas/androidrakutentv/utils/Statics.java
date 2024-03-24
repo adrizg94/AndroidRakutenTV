@@ -13,6 +13,7 @@ public class Statics {
 
     public static String url = "http://192.168.1.45:8080/rakutentv/";
     public static String urlImages = "http://192.168.1.45:8080/images/";
+    public static String userName = "";
     public static Film film = new Film();
 
     public static User getUserJSON(JSONArray userJSON) {

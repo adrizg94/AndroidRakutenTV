@@ -2,6 +2,7 @@ package com.seas.androidrakutentv.views;
 
 import android.content.Intent;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.seas.androidrakutentv.adapters.ListFilmsAdapter;
 import com.seas.androidrakutentv.beans.Film;
 import com.seas.androidrakutentv.list_films.ListFilmsContract;
 import com.seas.androidrakutentv.list_films.ListFilmsPresenter;
+import com.seas.androidrakutentv.utils.Statics;
 
 import java.util.ArrayList;
 
@@ -21,6 +23,7 @@ public class ListFilmsActivity extends AppCompatActivity implements ListFilmsCon
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager manager;
+    private TextView txtUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +33,12 @@ public class ListFilmsActivity extends AppCompatActivity implements ListFilmsCon
         presenter = new ListFilmsPresenter(this);
         presenter.getListFilms();
         initComponents();
+
     }
 
     public void initComponents() {
+        txtUserName = findViewById(R.id.txtUserName);
+        txtUserName.setText(Statics.userName);
         recycler = findViewById(R.id.recycler);
         recycler.setHasFixedSize(true);
         manager = new LinearLayoutManager(this);
