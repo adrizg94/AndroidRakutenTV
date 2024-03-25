@@ -36,6 +36,25 @@ public class Statics {
         return userLogin;
     }
 
+    public static JSONObject userJSONBuilder(User user) {
+        StringBuilder buffer = new StringBuilder();
+        JSONObject userJSON = null;
+        try {
+            buffer.append("{\"id\":0,\"nombre\":\"" + user.getNombre()
+                    + "\",\"apellido\":\"" + user.getApellido()
+                    + "\",\"email\":\"" + user.getEmail()
+                    + "\",\"password\":\"" + user.getPassword()
+                    + "\",\"registro\":\"" + user.getRegistro() + "\"}");
+            userJSON = new JSONObject(buffer.toString());
+        } catch (JSONException e) {
+            Log.e("log_tag", "Unable to convert in JSONOBject " + e);
+        } catch (Exception e) {
+            Log.e("log_tag", "Error " + e);
+        }
+        return userJSON;
+//        return buffer.toString();
+    }
+
     public static ArrayList<Film> getFilmsArrayJSON(JSONArray listFilmsJSON) {
         ArrayList<Film> listFilms = null;
         if (listFilmsJSON!=null) {
@@ -63,4 +82,7 @@ public class Statics {
         }
         return listFilms;
     }
+
+
+
 }

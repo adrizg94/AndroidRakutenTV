@@ -28,8 +28,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="70"
-                android:weightSum="3"
-                android:orientation="vertical">
+                android:weightSum="5"
+                android:orientation="vertical" android:gravity="center_vertical">
 
             <TextView
                     android:text="Título"
@@ -43,18 +43,27 @@
                     android:text="Estreno"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:id="@+id/txtEstreno"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:gravity="center_vertical" android:layout_marginLeft="10dp" android:textSize="16sp"/>
+                    android:gravity="center" android:layout_marginLeft="10dp" android:textSize="16sp"/>
             <TextView
                     android:text="Duración"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:id="@+id/txtDuracion"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:gravity="start" android:layout_marginLeft="10dp" android:textSize="16sp"/>
+                    android:gravity="center" android:layout_marginLeft="10dp" android:textSize="16sp"/>
+            <Button
+                    android:text="Alquilar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/btnAlquilar"
+                    android:backgroundTint="#4CAF50"
+                    android:layout_marginLeft="10dp"
+            />
         </LinearLayout>
 
     </LinearLayout>
@@ -62,14 +71,23 @@
             android:text="Sinopsis"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="20"
-            android:id="@+id/txtSinopsis" android:paddingHorizontal="30dp" android:paddingVertical="10dp"
+            android:layout_weight="15"
+            android:id="@+id/txtSinopsis" android:paddingHorizontal="15dp" android:paddingVertical="5dp"
             android:textSize="16sp"/>
     <WebView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="40"
+            android:layout_weight="35"
             android:id="@+id/webView">
     </WebView>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            app:srcCompat="@drawable/rakuten_r"
+            android:id="@+id/imageView4"
+            android:paddingTop="80dp"
+            android:paddingBottom="15dp"
+    />
 
 </LinearLayout>

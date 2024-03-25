@@ -76,6 +76,7 @@ public class ListFilmsAdapter extends RecyclerView.Adapter<ListFilmsAdapter.List
             Statics.film.setDuracion(listFilms.get(position).getDuracion());
             Statics.film.setSinopsis(listFilms.get(position).getSinopsis());
             Statics.film.setTrailer(listFilms.get(position).getTrailer());
+            Statics.film.setPrecio(listFilms.get(position).getPrecio());
 
             Intent viewFilm = new Intent(context, ViewFilmActivity.class);
             view.setViewFilmIntent(viewFilm);

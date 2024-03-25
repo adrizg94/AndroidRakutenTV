@@ -12,7 +12,9 @@ public class User {
     private String password;
     private String registro;
 
-    public User() {}
+    public User() {
+        this.registro = new SimpleDateFormat("yyy-MM-dd").format(Calendar.getInstance().getTime());
+    }
 
     public User(int id, String nombre, String apellido, String email, String password) {
         this.id = id;

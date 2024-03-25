@@ -1,7 +1,10 @@
 package com.seas.androidrakutentv.views;
 
+import android.graphics.Color;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,7 @@ public class ViewFilmActivity extends AppCompatActivity {
     private TextView txtEstreno;
     private TextView txtDuracion;
     private TextView txtSinopsis;
+    private Button btnAlquilar;
     private WebView webView;
 
     @Override
@@ -26,14 +30,19 @@ public class ViewFilmActivity extends AppCompatActivity {
 
         initComponents();
         setComponents();
+
+        btnAlquilar.setOnClickListener(v -> onBackPressed());
     }
+
     public void initComponents() {
         imgFilmView = findViewById(R.id.imgFilmView);
         txtTituloView = findViewById(R.id.txtTituloView);
         txtEstreno = findViewById(R.id.txtEstreno);
         txtDuracion = findViewById(R.id.txtDuracion);
         txtSinopsis = findViewById(R.id.txtSinopsis);
+        btnAlquilar = findViewById(R.id.btnAlquilar);
         webView = findViewById(R.id.webView);
+        webView.setBackgroundColor(Color.TRANSPARENT);
 
     }
 
@@ -43,6 +52,7 @@ public class ViewFilmActivity extends AppCompatActivity {
         txtEstreno.setText("Estreno: " + Statics.film.getEstreno());
         txtDuracion.setText("Duración: " + String.valueOf(Statics.film.getDuracion()) + " minutos");
         txtSinopsis.setText(Statics.film.getSinopsis());
+        btnAlquilar.setText("Alquilar: " + Statics.film.getPrecio() + "€");
         initWeb();
     }
 

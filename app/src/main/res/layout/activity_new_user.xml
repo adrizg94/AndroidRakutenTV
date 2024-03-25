@@ -5,11 +5,94 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.NewUserActivity">
+        tools:context=".views.LoginUserActivity"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:background="#B3FFEB3B"
+>
 
-    <TextView
-            android:text="Prueba nuevo usuario"
+    <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView2" tools:layout_editor_absoluteY="187dp"
-            tools:layout_editor_absoluteX="105dp"/>
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/rakuten_logo"
+            android:id="@+id/imageView"
+            android:layout_weight="20"
+            android:scaleType="fitCenter"
+            android:paddingHorizontal="30dp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:weightSum="100"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/edtNewNombre"
+                android:hint="Nombre:"
+                android:background="@drawable/border_view"
+                android:layout_gravity="center" android:shadowColor="#FFFFFF"
+                android:paddingHorizontal="40dp" android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="40dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/edtNewApellido"
+                android:hint="Apellido:"
+                android:background="@drawable/border_view"
+                android:layout_gravity="center" android:paddingHorizontal="40dp"
+                android:layout_marginBottom="20dp" android:layout_marginHorizontal="40dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/edtNewEmail"
+                android:hint="Email:"
+                android:background="@drawable/border_view"
+                android:layout_gravity="center" android:paddingHorizontal="40dp"
+                android:layout_marginBottom="20dp" android:layout_marginHorizontal="40dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/edtNewPass"
+                android:hint="Contraseña:"
+                android:background="@drawable/border_view"
+                android:layout_gravity="center" android:paddingHorizontal="40dp"
+                android:layout_marginBottom="20dp" android:layout_marginHorizontal="40dp"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:id="@+id/btnNewUser"
+                android:text="Registrarte"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#2196F3" android:textSize="20sp" android:textStyle="bold"
+                android:paddingHorizontal="40dp" android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            app:srcCompat="@drawable/rakuten_r"
+            android:id="@+id/imageView3"
+            android:scaleType="fitCenter" android:paddingTop="80dp" android:paddingBottom="15dp"/>
+
 </LinearLayout>
