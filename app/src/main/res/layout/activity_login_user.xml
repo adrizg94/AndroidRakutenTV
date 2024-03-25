@@ -8,8 +8,7 @@
         tools:context=".views.LoginUserActivity"
         android:weightSum="100"
         android:orientation="vertical"
-        android:background="#B3FFEB3B"
->
+        android:background="#B3FFEB3B">
 
     <ImageView
             android:layout_width="wrap_content"
@@ -40,6 +39,7 @@
                 android:layout_gravity="center" android:shadowColor="#FFFFFF"
                 android:paddingHorizontal="40dp" android:layout_marginVertical="20dp"
                 android:layout_marginHorizontal="40dp"/>
+
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

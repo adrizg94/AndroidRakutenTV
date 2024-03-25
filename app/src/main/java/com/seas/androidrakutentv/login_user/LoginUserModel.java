@@ -10,10 +10,6 @@ public class LoginUserModel implements LoginUserContract.Model {
     @Override
     public void getUserService(OnLoginUserListener onLoginUserListener, User user) {
 
-//        HashMap<String, String> params = new HashMap<>();
-//        params.put("email", user.getEmail());
-//        params.put("password", user.getPassword());
-
         String url = Statics.url + "login/" + user.getEmail() + "/" + user.getPassword();
         tarea = new LoginUserTask(onLoginUserListener);
         tarea.execute(url);

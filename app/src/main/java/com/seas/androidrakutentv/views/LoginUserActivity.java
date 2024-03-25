@@ -15,7 +15,7 @@ import com.seas.androidrakutentv.login_user.LoginUserContract;
 import com.seas.androidrakutentv.login_user.LoginUserPresenter;
 import com.seas.androidrakutentv.utils.Statics;
 
-//Vista del Login
+//MainActivity
 public class LoginUserActivity extends AppCompatActivity implements LoginUserContract.View {
 
     private EditText edtUser;

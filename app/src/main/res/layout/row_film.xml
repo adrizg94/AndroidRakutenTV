@@ -2,13 +2,11 @@
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
-        app:cardUseCompatPadding="true"
->
+        app:cardUseCompatPadding="true">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -22,7 +20,6 @@
                 android:layout_weight="25"
                 android:scaleType="centerCrop"
                 android:id="@+id/imgFilm"/>
-
 
         <LinearLayout
                 android:layout_width="0dp"
@@ -86,8 +83,7 @@
                 android:src="@drawable/mas"
                 android:id="@+id/btnView"
                 android:backgroundTint="@color/colorAccent"
-                android:contentDescription="btnView"
-        />
+                android:contentDescription="btnView"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

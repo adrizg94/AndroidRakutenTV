@@ -52,7 +52,6 @@ public class Statics {
             Log.e("log_tag", "Error " + e);
         }
         return userJSON;
-//        return buffer.toString();
     }
 
     public static ArrayList<Film> getFilmsArrayJSON(JSONArray listFilmsJSON) {
@@ -82,7 +81,5 @@ public class Statics {
         }
         return listFilms;
     }
-
-
 
 }

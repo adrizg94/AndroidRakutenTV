@@ -64,7 +64,6 @@ public class ListFilmsAdapter extends RecyclerView.Adapter<ListFilmsAdapter.List
     public void onBindViewHolder(@NonNull @NotNull ListFilmsViewHolder holder, int position) {
         Picasso.get().load(Statics.urlImages + listFilms.get(position).getUrl() + ".jpg").into(holder.imagen);
         holder.titulo.setText(listFilms.get(position).getTitulo());
-//        holder.sinopsis.setText(String.valueOf(listFilms.get(position).getPrecio()));
         holder.puntuacion.setText("Visitas: " + (listFilms.get(position).getPuntuacion()));
         holder.visitas.setText("Votos: " + (listFilms.get(position).getVotos()));
         holder.precio.setText("Alquiler: " + (listFilms.get(position).getPrecio()) + "€");
